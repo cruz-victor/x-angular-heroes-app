@@ -5,11 +5,36 @@
     <mat-label>Buscador de heroes</mat-label>
     <input type="text"
     matInput
-    [formControl]="searchInput">
+    [formControl]="searchInput"
+    (input)="searchHero()"
+    [matAutocomplete]="auto">
+
+    <mat-autocomplete
+      autoActiveFirstOption
+      #auto="matAutocomplete"
+      (optionSelected)="onSelectedOption($event)">
+      <mat-option *ngFor="let hero of heroes" [value]="hero">
+        {{hero.superhero}}
+      </mat-option>
+
+      <mat-option
+      *ngIf="heroes.length===0 && searchInput.value && searchInput.value.length>0"
+      value="">
+        No se encontro nada con el termino {{searchInput.value}}
+      </mat-option>
+    </mat-autocomplete>
+
   </mat-form-field>
 
-  {{searchInput.value| json}}
+{{selectedHero |json}}
+
+  <!-- {{searchInput.value| json}}
   {{searchInput.touched| json}}
-  {{searchInput.pristine| json}}
+  {{searchInput.pristine| json}} -->
+
+
+
+
+
 </div>
 
