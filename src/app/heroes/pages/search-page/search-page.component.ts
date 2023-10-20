@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-search-page',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-page.component.css']
 })
 export class SearchPageComponent {
-
+  public searchInput=new FormControl();
 }
