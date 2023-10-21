@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesService } from '../../services/hereos.service';
+import { HeroesService } from '../../services/heroes';
 import { Hero } from '../../interfaces/hero.interface';
 
 @Component({
@@ -14,7 +14,7 @@ export class ListPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.heroesService
-      .getHerores()
-      .subscribe((heores) => (this.heroes = heores));
+      .getHeroes()
+      .subscribe((heroes) => (this.heroes = heroes));
   }
 }

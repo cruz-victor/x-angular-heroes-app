@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Hero } from '../../interfaces/hero.interface';
-import { HeroesService } from '../../services/hereos.service';
+import { HeroesService } from '../../services/heroes';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 @Component({
