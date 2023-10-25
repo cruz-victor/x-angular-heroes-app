@@ -19,9 +19,16 @@ export class NewPageComponent {
     alt_img: new FormControl(''),
   });
 
-
   public publishers=[
     {id:'DC Comics', desc:'DC-Comics'},
-    {id:'Marvel Comics', desc:'Marvel-Comics'}
+    {id:'Marvel Comics', desc:'Marvel Comics'}
   ];
+
+  onSubmit():void{
+    console.log({
+      'isValid':this.heroForm.valid,
+      'values': this.heroForm.value
+    });
+  }
+
 }
