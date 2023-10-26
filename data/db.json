@@ -21,7 +21,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
+      "characters": "Kal-El",
+      "alt_img": "https://www.infobae.com/new-resizer/UrI6aSh4tAJblqc2rm-Q5q42x68=/992x1488/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/YKUHUPENUJCFPLMZSMGW4FH74U.jpg"
     },
     {
       "id": "dc-flash",
@@ -166,6 +167,24 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "Rnk4x1O",
+      "superhero": "Vic",
+      "publisher": "Marvel Comics",
+      "alter_ego": "aaa",
+      "first_appearance": "2017 granada",
+      "characters": "VicCitic",
+      "alt_img": "https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2021/02/Saint-Seiya-Por-que-hay-dos-armaduras-de-Sagitario-4.jpg"
+    },
+    {
+      "id": "ffm91N2",
+      "superhero": "aaaaa",
+      "publisher": "DC Comics",
+      "alter_ego": "bbbbbb",
+      "first_appearance": "ccccc",
+      "characters": "ddddddd",
+      "alt_img": "https://pm1.aminoapps.com/6367/73e502cbf4a43a3fce2cfb44f9eea28f20ea69ee_hq.jpg"
     }
   ]
 }

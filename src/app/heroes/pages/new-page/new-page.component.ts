@@ -1,13 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Publisher } from '../../interfaces/hero.interface';
+import { Hero, Publisher } from '../../interfaces/hero.interface';
+import { HeroesService } from '../../services/heroes';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-new-page',
   templateUrl: './new-page.component.html',
   styleUrls: ['./new-page.component.css']
 })
-export class NewPageComponent {
+export class NewPageComponent implements OnInit {
+
+  constructor(private heroesService:HeroesService,
+    private activatedRoute:ActivatedRoute,
+    private router:Router){
+  }
+
+  ngOnInit(): void {
+    if(!this.router.url.includes('edit')) return;
+
+    this.activatedRoute.params
+    .pipe(
+      switchMap(({id})=>this.heroesService.getHeroById(id))
+    )
+    .subscribe(hero=>{
+      if (!hero) {
+        return this.router.navigateByUrl('/');
+      }
+
+      this.heroForm.reset(hero);
+      return;
+    });
+
+    throw new Error('Method not implemented.');
+  }
 
   public heroForm=new FormGroup({
     id: new FormControl<string>(''),
@@ -24,11 +51,31 @@ export class NewPageComponent {
     {id:'Marvel Comics', desc:'Marvel Comics'}
   ];
 
+  get currentHero():Hero{
+    const hero=this.heroForm.value as Hero;
+
+    return hero;
+  }
+
   onSubmit():void{
-    console.log({
-      'isValid':this.heroForm.valid,
-      'values': this.heroForm.value
+    if (!this.heroForm.valid) return;
+
+    if(this.currentHero.id){
+      this.heroesService.updateHero(this.currentHero)
+      .subscribe(hero=>{
+        //TODO: mostrar snackbar
+        console.log('...update hero');
+      });
+
+      return;
+    }
+
+    this.heroesService.addHero(this.currentHero)
+    .subscribe(hero=>{
+      //TODO: mostrar snackbar
+      console.log('...insert hero');
     });
+
   }
 
 }

@@ -1,6 +1,6 @@
 <h1>
   Editar/Agregar
-  Heroe
+  Hero
   <small>Superman</small>
 </h1>
 
@@ -24,7 +24,7 @@
           </mat-form-field>
 
           <mat-form-field class="col-12">
-            <mat-label>Primer aparación</mat-label>
+            <mat-label>Primer aparición</mat-label>
             <input type="text" matInput required="" formControlName="first_appearance">
           </mat-form-field>
 
@@ -66,7 +66,12 @@
 
   <div class="col-6 sm:col-6">
     <mat-card>
-      <img src="" alt="Imagen del hero">
+      <img [src]="currentHero|heroImage" alt="Imagen del hero">
     </mat-card>
   </div>
 </div>
+
+<pre>
+  {{currentHero|json}}
+</pre>
+
