@@ -13,7 +13,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Bruce Wayne",
       "first_appearance": "Detective Comics #27",
-      "characters": "Bruce Wayne"
+      "characters": "Bruce Wayne",
+      "alt_img": null
     },
     {
       "id": "dc-superman",
@@ -30,7 +31,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Jay Garrick",
       "first_appearance": "Flash Comics #1",
-      "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
+      "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen",
+      "alt_img": null
     },
     {
       "id": "dc-green",
@@ -185,6 +187,15 @@
       "first_appearance": "ccccc",
       "characters": "ddddddd",
       "alt_img": "https://pm1.aminoapps.com/6367/73e502cbf4a43a3fce2cfb44f9eea28f20ea69ee_hq.jpg"
+    },
+    {
+      "id": "lawYfEm",
+      "superhero": "aaa",
+      "publisher": "Marvel Comics",
+      "alter_ego": "bbb",
+      "first_appearance": "ccc",
+      "characters": "ddd",
+      "alt_img": "https://media.revistagq.com/photos/643ffd0043b7dde5906f2d7e/1:1/w_1079,h_1079,c_limit/904934.jpg"
     }
   ]
 }
